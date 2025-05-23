@@ -1,0 +1,1 @@
+ D:\\Mediscribe\\.dart_tool\\flutter_build\\dc1c62bfe64e22e5b915d2927d57409b\\native_assets.yaml: 

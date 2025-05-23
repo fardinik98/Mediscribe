@@ -1,0 +1,190 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.mediscribe"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="34" />
+10    <!--
+11         The INTERNET permission is required for development. Specifically,
+12         the Flutter tool needs it to communicate with the running application
+13         to allow setting breakpoints, to provide hot reload, etc.
+14    -->
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->D:\Mediscribe\android\app\src\debug\AndroidManifest.xml:6:5-66
+15-->D:\Mediscribe\android\app\src\debug\AndroidManifest.xml:6:22-64
+16    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+16-->D:\Mediscribe\android\app\src\main\AndroidManifest.xml:2:5-79
+16-->D:\Mediscribe\android\app\src\main\AndroidManifest.xml:2:22-76
+17    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+17-->D:\Mediscribe\android\app\src\main\AndroidManifest.xml:3:5-81
+17-->D:\Mediscribe\android\app\src\main\AndroidManifest.xml:3:22-78
+18    <!--
+19 Required to query activities that can process text, see:
+20         https://developer.android.com/training/package-visibility and
+21         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+22
+23         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin.
+24    -->
+25    <queries>
+25-->D:\Mediscribe\android\app\src\main\AndroidManifest.xml:44:5-49:15
+26        <intent>
+26-->D:\Mediscribe\android\app\src\main\AndroidManifest.xml:45:9-48:18
+27            <action android:name="android.intent.action.PROCESS_TEXT" />
+27-->D:\Mediscribe\android\app\src\main\AndroidManifest.xml:46:13-72
+27-->D:\Mediscribe\android\app\src\main\AndroidManifest.xml:46:21-70
+28
+29            <data android:mimeType="text/plain" />
+29-->D:\Mediscribe\android\app\src\main\AndroidManifest.xml:47:13-50
+29-->D:\Mediscribe\android\app\src\main\AndroidManifest.xml:47:19-48
+30        </intent>
+31    </queries>
+32
+33    <uses-permission android:name="android.permission.VIBRATE" />
+33-->[:flutter_local_notifications] D:\Mediscribe\build\flutter_local_notifications\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:7:5-66
+33-->[:flutter_local_notifications] D:\Mediscribe\build\flutter_local_notifications\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:7:22-63
+34    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+34-->[:flutter_local_notifications] D:\Mediscribe\build\flutter_local_notifications\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:5-77
+34-->[:flutter_local_notifications] D:\Mediscribe\build\flutter_local_notifications\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:22-74
+35
+36    <permission
+36-->[androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\8.10.2\transforms\b7afdc810aa3c152069d43f671a2cdfc\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+37        android:name="com.example.mediscribe.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+37-->[androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\8.10.2\transforms\b7afdc810aa3c152069d43f671a2cdfc\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+38        android:protectionLevel="signature" />
+38-->[androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\8.10.2\transforms\b7afdc810aa3c152069d43f671a2cdfc\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+39
+40    <uses-permission android:name="com.example.mediscribe.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+40-->[androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\8.10.2\transforms\b7afdc810aa3c152069d43f671a2cdfc\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+40-->[androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\8.10.2\transforms\b7afdc810aa3c152069d43f671a2cdfc\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+41
+42    <application
+43        android:name="android.app.Application"
+44        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+44-->[androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\8.10.2\transforms\b7afdc810aa3c152069d43f671a2cdfc\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+45        android:debuggable="true"
+46        android:extractNativeLibs="true"
+47        android:icon="@mipmap/ic_launcher"
+48        android:label="mediscribe" >
+49        <activity
+50            android:name="com.example.mediscribe.MainActivity"
+51            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+52            android:exported="true"
+53            android:hardwareAccelerated="true"
+54            android:launchMode="singleTop"
+55            android:taskAffinity=""
+56            android:theme="@style/LaunchTheme"
+57            android:windowSoftInputMode="adjustResize" >
+58
+59            <!--
+60                 Specifies an Android theme to apply to this Activity as soon as
+61                 the Android process has started. This theme is visible to the user
+62                 while the Flutter UI initializes. After that, this theme continues
+63                 to determine the Window background behind the Flutter UI.
+64            -->
+65            <meta-data
+66                android:name="io.flutter.embedding.android.NormalTheme"
+67                android:resource="@style/NormalTheme" />
+68
+69            <intent-filter>
+70                <action android:name="android.intent.action.MAIN" />
+71
+72                <category android:name="android.intent.category.LAUNCHER" />
+73            </intent-filter>
+74        </activity>
+75        <!--
+76             Don't delete the meta-data below.
+77             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+78        -->
+79
+80        <receiver
+81            android:name="com.example.mediscribe.AlarmReceiver"
+82            android:exported="true" />
+83
+84        <meta-data
+85            android:name="flutterEmbedding"
+86            android:value="2" />
+87
+88        <uses-library
+88-->[androidx.window:window:1.2.0] C:\Users\DELL\.gradle\caches\8.10.2\transforms\830a0437fb21e71da6041f6af5ba1ea9\transformed\jetified-window-1.2.0\AndroidManifest.xml:23:9-25:40
+89            android:name="androidx.window.extensions"
+89-->[androidx.window:window:1.2.0] C:\Users\DELL\.gradle\caches\8.10.2\transforms\830a0437fb21e71da6041f6af5ba1ea9\transformed\jetified-window-1.2.0\AndroidManifest.xml:24:13-54
+90            android:required="false" />
+90-->[androidx.window:window:1.2.0] C:\Users\DELL\.gradle\caches\8.10.2\transforms\830a0437fb21e71da6041f6af5ba1ea9\transformed\jetified-window-1.2.0\AndroidManifest.xml:25:13-37
+91        <uses-library
+91-->[androidx.window:window:1.2.0] C:\Users\DELL\.gradle\caches\8.10.2\transforms\830a0437fb21e71da6041f6af5ba1ea9\transformed\jetified-window-1.2.0\AndroidManifest.xml:26:9-28:40
+92            android:name="androidx.window.sidecar"
+92-->[androidx.window:window:1.2.0] C:\Users\DELL\.gradle\caches\8.10.2\transforms\830a0437fb21e71da6041f6af5ba1ea9\transformed\jetified-window-1.2.0\AndroidManifest.xml:27:13-51
+93            android:required="false" />
+93-->[androidx.window:window:1.2.0] C:\Users\DELL\.gradle\caches\8.10.2\transforms\830a0437fb21e71da6041f6af5ba1ea9\transformed\jetified-window-1.2.0\AndroidManifest.xml:28:13-37
+94
+95        <provider
+95-->[androidx.emoji2:emoji2:1.3.0] C:\Users\DELL\.gradle\caches\8.10.2\transforms\237e34521538dac3187484f7ba08975e\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+96            android:name="androidx.startup.InitializationProvider"
+96-->[androidx.emoji2:emoji2:1.3.0] C:\Users\DELL\.gradle\caches\8.10.2\transforms\237e34521538dac3187484f7ba08975e\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:25:13-67
+97            android:authorities="com.example.mediscribe.androidx-startup"
+97-->[androidx.emoji2:emoji2:1.3.0] C:\Users\DELL\.gradle\caches\8.10.2\transforms\237e34521538dac3187484f7ba08975e\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:26:13-68
+98            android:exported="false" >
+98-->[androidx.emoji2:emoji2:1.3.0] C:\Users\DELL\.gradle\caches\8.10.2\transforms\237e34521538dac3187484f7ba08975e\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:27:13-37
+99            <meta-data
+99-->[androidx.emoji2:emoji2:1.3.0] C:\Users\DELL\.gradle\caches\8.10.2\transforms\237e34521538dac3187484f7ba08975e\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+100                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+100-->[androidx.emoji2:emoji2:1.3.0] C:\Users\DELL\.gradle\caches\8.10.2\transforms\237e34521538dac3187484f7ba08975e\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:30:17-75
+101                android:value="androidx.startup" />
+101-->[androidx.emoji2:emoji2:1.3.0] C:\Users\DELL\.gradle\caches\8.10.2\transforms\237e34521538dac3187484f7ba08975e\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:31:17-49
+102            <meta-data
+102-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\DELL\.gradle\caches\8.10.2\transforms\54386dbafc155635dccf713067058335\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+103                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+103-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\DELL\.gradle\caches\8.10.2\transforms\54386dbafc155635dccf713067058335\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+104                android:value="androidx.startup" />
+104-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\DELL\.gradle\caches\8.10.2\transforms\54386dbafc155635dccf713067058335\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+105            <meta-data
+105-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DELL\.gradle\caches\8.10.2\transforms\2ed097ef5b1c4ffcc05a576c6a62bcdf\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+106                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+106-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DELL\.gradle\caches\8.10.2\transforms\2ed097ef5b1c4ffcc05a576c6a62bcdf\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+107                android:value="androidx.startup" />
+107-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DELL\.gradle\caches\8.10.2\transforms\2ed097ef5b1c4ffcc05a576c6a62bcdf\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+108        </provider>
+109
+110        <receiver
+110-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DELL\.gradle\caches\8.10.2\transforms\2ed097ef5b1c4ffcc05a576c6a62bcdf\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+111            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+111-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DELL\.gradle\caches\8.10.2\transforms\2ed097ef5b1c4ffcc05a576c6a62bcdf\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+112            android:directBootAware="false"
+112-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DELL\.gradle\caches\8.10.2\transforms\2ed097ef5b1c4ffcc05a576c6a62bcdf\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+113            android:enabled="true"
+113-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DELL\.gradle\caches\8.10.2\transforms\2ed097ef5b1c4ffcc05a576c6a62bcdf\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+114            android:exported="true"
+114-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DELL\.gradle\caches\8.10.2\transforms\2ed097ef5b1c4ffcc05a576c6a62bcdf\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+115            android:permission="android.permission.DUMP" >
+115-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DELL\.gradle\caches\8.10.2\transforms\2ed097ef5b1c4ffcc05a576c6a62bcdf\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+116            <intent-filter>
+116-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DELL\.gradle\caches\8.10.2\transforms\2ed097ef5b1c4ffcc05a576c6a62bcdf\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+117                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+117-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DELL\.gradle\caches\8.10.2\transforms\2ed097ef5b1c4ffcc05a576c6a62bcdf\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+117-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DELL\.gradle\caches\8.10.2\transforms\2ed097ef5b1c4ffcc05a576c6a62bcdf\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+118            </intent-filter>
+119            <intent-filter>
+119-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DELL\.gradle\caches\8.10.2\transforms\2ed097ef5b1c4ffcc05a576c6a62bcdf\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+120                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+120-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DELL\.gradle\caches\8.10.2\transforms\2ed097ef5b1c4ffcc05a576c6a62bcdf\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+120-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DELL\.gradle\caches\8.10.2\transforms\2ed097ef5b1c4ffcc05a576c6a62bcdf\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+121            </intent-filter>
+122            <intent-filter>
+122-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DELL\.gradle\caches\8.10.2\transforms\2ed097ef5b1c4ffcc05a576c6a62bcdf\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+123                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+123-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DELL\.gradle\caches\8.10.2\transforms\2ed097ef5b1c4ffcc05a576c6a62bcdf\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+123-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DELL\.gradle\caches\8.10.2\transforms\2ed097ef5b1c4ffcc05a576c6a62bcdf\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+124            </intent-filter>
+125            <intent-filter>
+125-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DELL\.gradle\caches\8.10.2\transforms\2ed097ef5b1c4ffcc05a576c6a62bcdf\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+126                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+126-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DELL\.gradle\caches\8.10.2\transforms\2ed097ef5b1c4ffcc05a576c6a62bcdf\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+126-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DELL\.gradle\caches\8.10.2\transforms\2ed097ef5b1c4ffcc05a576c6a62bcdf\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+127            </intent-filter>
+128        </receiver>
+129    </application>
+130
+131</manifest>
