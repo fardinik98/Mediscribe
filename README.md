@@ -43,18 +43,15 @@ MediScribe is a Flutter-based mobile app designed to help users manage their med
 
 ## 📸 Screenshots
 
-<p float="left">
-  <img src="https://github.com/fardinik98/Mediscribe/blob/main/screenshots/homepage.jpg?raw=true" width="45%" alt="Home Page"/>
-  <img src="https://github.com/fardinik98/Mediscribe/blob/main/screenshots/addmanually.jpg?raw=true" width="45%" alt="Add Medicine"/>
-</p>
-
-<p float="left">
-  <img src="https://github.com/fardinik98/Mediscribe/blob/main/screenshots/activeMed.jpg?raw=true" width="45%" alt="Active Medicines"/>
-  <img src="https://github.com/fardinik98/Mediscribe/blob/main/screenshots/history.jpg?raw=true" width="45%" alt="History"/>
+<p align="center">
+  <img src="https://github.com/fardinik98/Mediscribe/blob/main/screenshots/homepage.jpg?raw=true" width="30%" alt="Home Page"/>
+  <img src="https://github.com/fardinik98/Mediscribe/blob/main/screenshots/addmanually.jpg?raw=true" width="30%" alt="Add Medicine"/>
+  <img src="https://github.com/fardinik98/Mediscribe/blob/main/screenshots/activeMed.jpg?raw=true" width="30%" alt="Active Medicines"/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/fardinik98/Mediscribe/blob/main/screenshots/settings.jpg?raw=true" width="45%" alt="Settings"/>
+  <img src="https://github.com/fardinik98/Mediscribe/blob/main/screenshots/history.jpg?raw=true" width="30%" alt="History"/>
+  <img src="https://github.com/fardinik98/Mediscribe/blob/main/screenshots/settings.jpg?raw=true" width="30%" alt="Settings"/>
 </p>
 
 
