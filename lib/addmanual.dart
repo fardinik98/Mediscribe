@@ -124,7 +124,6 @@ class _AddManualPageState extends State<AddManualPage> {
 
     medication['id'] = newId;
 
-    //Now schedule notification properly
     await NotificationService.scheduleMedicationReminderFor(
         medData: medication);
 
