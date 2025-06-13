@@ -43,7 +43,6 @@ class _HomePageState extends State<HomePage> {
     final now = DateTime.now();
     final List<Map<String, dynamic>> upcoming = [];
 
-    // Step 1: Get notifyBefore in minutes
     final notifyStr = await DatabaseHelper().getNotifyBefore();
     final notifyBeforeMinutes =
         int.tryParse((notifyStr ?? '15').split(' ')[0]) ?? 15;
@@ -87,7 +86,6 @@ class _HomePageState extends State<HomePage> {
               timingTime.minute,
             );
 
-            // Step 2: Adjust for notifyBefore
             if (timing.startsWith('Before')) {
               scheduledTime = scheduledTime
                   .subtract(Duration(minutes: notifyBeforeMinutes));
@@ -207,7 +205,6 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              /// Top Header
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -230,7 +227,6 @@ class _HomePageState extends State<HomePage> {
               ),
               const SizedBox(height: 20),
 
-              /// Upcoming Reminder
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
@@ -253,7 +249,6 @@ class _HomePageState extends State<HomePage> {
 
               const SizedBox(height: 20),
 
-              /// Quick Action Buttons
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -297,7 +292,6 @@ class _HomePageState extends State<HomePage> {
 
               const SizedBox(height: 20),
 
-              /// Active Medications
               Text(
                 'Active Medications',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -355,7 +349,6 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
 
-              /// View Inactive
               Center(
                 child: TextButton.icon(
                   onPressed: () {
