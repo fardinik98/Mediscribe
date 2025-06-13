@@ -33,7 +33,7 @@ class NotificationService {
         await _platform.invokeMethod('requestExactAlarmPermission');
       }
     } catch (e) {
-      print('⚠️ Exact alarm permission check/request failed: $e');
+      print('Exact alarm permission check/request failed: $e');
     }
   }
 
@@ -45,22 +45,21 @@ class NotificationService {
       try {
         await _nativeAlarmChannel.invokeMethod('cancelAlarm', {'id': hourlyId});
       } catch (e) {
-        print("⚠️ Failed to cancel hourly alarm ID $hourlyId: $e");
+        print("Failed to cancel hourly alarm ID $hourlyId: $e");
       }
     }
 
-    // Cancel base meal alarm for this med
     for (int i = 0; i < 10; i++) {
       final mealId = 50000 + (medId * 100) + i;
       await _flutterLocalNotificationsPlugin.cancel(mealId);
       try {
         await _nativeAlarmChannel.invokeMethod('cancelAlarm', {'id': mealId});
       } catch (e) {
-        print("⚠️ Failed to cancel meal alarm ID $mealId: $e");
+        print("Failed to cancel meal alarm ID $mealId: $e");
       }
     }
 
-    print("🗑️ Cancelled all alarms for medication ID $medId");
+    print("Cancelled all alarms for medication ID $medId");
   }
 
   static Future<void> scheduleMedicationReminderFor({
@@ -76,8 +75,8 @@ class NotificationService {
     final now = DateTime.now();
     final medId = medData['id'] as int;
 
-    int hourlyIdCounter = 0; // For hourly-based reminders
-    int mealIdCounter = 0; // For non-hourly (meal-based) reminders
+    int hourlyIdCounter = 0;
+    int mealIdCounter = 0; 
 
     if (frequency == 'Hourly' && hourlyInterval != null && firstDose != null) {
       final intervalHours = int.tryParse(
@@ -156,14 +155,13 @@ class NotificationService {
 
   static Future<void> cancelMealBasedReminders() async {
     for (int id = 50000; id < 51000; id++) {
-      // increment later (time complex)
       try {
         await _nativeAlarmChannel.invokeMethod('cancelAlarm', {'id': id});
       } catch (e) {
-        print("⚠️ Failed to cancel native alarm ID $id: $e");
+        print("Failed to cancel native alarm ID $id: $e");
       }
     }
-    print("🧹 Cancelled all meal-based reminders.");
+    print("Cancelled all meal-based reminders.");
   }
 
   static DateTime getAdjustedTimeObject(TimeOfDay time, int beforeMinutes) {
@@ -243,7 +241,7 @@ class NotificationService {
         );
 
     if (!scheduledDateTime.isAfter(now)) {
-      print("⏭️ Skipping alarm: $title at ${time.hour}:${time.minute} (past)");
+      print("Skipping alarm: $title at ${time.hour}:${time.minute} (past)");
       return;
     }
 
@@ -259,9 +257,9 @@ class NotificationService {
         'minute': scheduledDateTime.minute,
       });
       print(
-          "📲 Native alarm scheduled: $title → $body at ${scheduledDateTime.hour}:${scheduledDateTime.minute}");
+          "Native alarm scheduled: $title → $body at ${scheduledDateTime.hour}:${scheduledDateTime.minute}");
     } catch (e) {
-      print("❌ Failed to schedule native alarm: $e");
+      print("Failed to schedule native alarm: $e");
     }
   }
 
