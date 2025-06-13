@@ -140,7 +140,6 @@ class DatabaseHelper {
     );
   }
 
-  /// Copy medicines.db from assets (only once)
   static Future<void> copyMedicinesDbIfNeeded() async {
     final documentsDir = await getApplicationDocumentsDirectory();
     final path = join(documentsDir.path, 'medicines.db');
@@ -152,7 +151,6 @@ class DatabaseHelper {
     }
   }
 
-  /// Open the read-only medicines.db
   static Future<Database> getMedicinesDatabase() async {
     if (_medicinesDb != null) return _medicinesDb!;
     final documentsDir = await getApplicationDocumentsDirectory();
@@ -161,7 +159,6 @@ class DatabaseHelper {
     return _medicinesDb!;
   }
 
-  /// Fetch brand suggestions by prefix
   Future<List<String>> getBrandSuggestions(String prefix) async {
     final db = await getMedicinesDatabase();
     final results = await db.query(
@@ -192,7 +189,6 @@ class DatabaseHelper {
       String brandName) async {
     final db = await getMedicinesDatabase();
 
-    // Step 1: Get the generic name for the input brand (case-insensitive)
     final source = await db.query(
       'medicines',
       columns: ['generic'],
@@ -205,14 +201,12 @@ class DatabaseHelper {
 
     final generic = source.first['generic'];
 
-    // Step 2: Query all entries that match the generic
     final results = await db.query(
       'medicines',
       where: 'generic = ?',
       whereArgs: [generic],
     );
 
-    // Step 3: Group by brand name
     Map<String, List<Map<String, dynamic>>> grouped = {};
     for (var row in results) {
       final brand = (row['brand name'] ?? 'Unknown').toString();
